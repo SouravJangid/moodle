@@ -473,8 +473,7 @@
     }
 
     #plugins-control-panel {
-        .status-missing td,
-        .deprecatedtype td {
+        .status-missing td {
             background-color: $state-warning-bg;
         }
 
@@ -519,7 +518,6 @@
     // Plugins check table.
     #plugins-check {
         .status-missing,
-        .deprecatedtype,
         .status-downgrade {
             td {
                 background-color: $state-danger-bg;

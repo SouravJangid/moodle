@@ -333,8 +333,13 @@ $blocks-plus-gutter: $blocks-column-width + ( $grid-gutter-width * 0.5 );
     color: $text-muted;
 }
 
-.block_tree .tree_item.branch {
-    margin-left: 8px;
+.block_social_activities li a.movehere,
+.block_site_main_menu li a.movehere {
+    display: block;
+    width: 100%;
+    height: 2rem;
+    border: 2px dashed $gray-800;
+    margin: 4px 0;
 }
 
 //
@@ -382,7 +387,7 @@ $blocks-plus-gutter: $blocks-column-width + ( $grid-gutter-width * 0.5 );
     .pluscontainer {
         border: $border-width solid $primary-light-border;
         border-radius: 50%;
-        width: map-get($iconwidthsizes, 5);
+        width: map-get($iconsizes, 5);
         height: map-get($iconsizes, 5);
     }
     &:hover {

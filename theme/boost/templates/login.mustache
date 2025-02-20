@@ -14,7 +14,6 @@
     You should have received a copy of the GNU General Public License
     along with Moodle.  If not, see <http://www.gnu.org/licenses/>.
 }}
-
 {{!
     @template theme_boost/login
 
@@ -26,14 +25,11 @@
             "doctype": "<!DOCTYPE html>",
             "page_title": "Login page",
             "favicon": "favicon.ico",
-            "main_content": "<h1>Headers keep HTML validators happy</h1>",
-            }
+            "main_content": "<h1>Headers keep HTML validators happy</h1>"
+        }
     }
 }}
-
 {{> theme_boost/head }}
-
-
 
 <body {{{ bodyattributes }}}>
 {{> core/local/toast/wrapper}}
@@ -43,66 +39,23 @@
     {{{ output.standard_top_of_body_html }}}
 
     <div id="page" class="container-fluid pt-5 mt-0">
-        <div id="page-content" class="row login-page-content">
+        <div id="page-content" class="row">
             <div id="region-main-box" class="col-12">
-                <section id="region-main" class="col-12 h-100" aria-label="{{#str}}content{{/str}}">
+                <div id="region-main" class="col-12 h-100">
                 <div class="login-wrapper">
-                    <div class="login-view"> 
-                            <div class="images">
-                            <img src="{{config.wwwroot}}/theme/boost/pix/images/1.png" alt="" class="login-image">
-                            </div>
-                         <div class="login-imgtitle">
-                        <h2 class="login-title">Transforming Education with AI Innovation</h2>
-                      </div>
-                      <div class="tilted-rectangles">
-                          <div></div>
-                           <div></div>
-                            <div></div>
-                      </div>
-
-                    </div>
-
                     <div class="login-container">
                     {{{ output.main_content }}}
                     </div>
                 </div>
-                </section>
+                </div>
             </div>
         </div>
     </div>
     {{> theme_boost/footer }}
 </div>
-<script>
-    document.addEventListener('DOMContentLoaded', function () {
-        const messages = [
-            "Transforming Education with AI Innovation",
-            "Fortified Data Security",
-            "Empowering Learners Globally"
-        ];
-
-        const images = [
-            "{{config.wwwroot}}/theme/boost/pix/images/1.png",
-            "{{config.wwwroot}}/theme/boost/pix/images/2.png",
-            "{{config.wwwroot}}/theme/boost/pix/images/3.png"
-        ];
-
-        let index = 0;
-        const messageElement = document.querySelector('.login-title');
-        const imageElement = document.querySelector('.login-image');
-
-        if (messageElement && imageElement) {
-            setInterval(() => {
-                messageElement.textContent = messages[index];
-                imageElement.src = images[index];
-                index = (index + 1) % messages.length;
-            }, 3000); // Changes every 3 seconds
-        }
-    });
-</script>
 
 </body>
 </html>
-
 {{#js}}
 M.util.js_pending('theme_boost/loader');
 require(['theme_boost/loader'], function() {

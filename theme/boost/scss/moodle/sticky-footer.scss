@@ -24,6 +24,9 @@ body {
             body.limitedwidth.uses-drawers & {
                 max-width: $course-content-maxwidth;
             }
+            body.mediumwidth.uses-drawers & {
+                max-width: $medium-content-maxwidth;
+            }
         }
     }
     // Adjust sticky footer width when drawers are open.
